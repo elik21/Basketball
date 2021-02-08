@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.Statistics"
+    android:background="@drawable/app_backround">
+
+
+    <EditText
+        android:id="@+id/clock"
+        android:layout_width="118dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginLeft="146dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginRight="147dp"
+        android:gravity="center"
+        android:text="10:00:00"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="255dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clock">
+
+        <Button
+            android:id="@+id/newQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn"
+            android:text="New Quarter"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/resume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn"
+            android:text="resume" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="255dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/stopb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn"
+            android:text="Stop" />
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn"
+            android:text="start" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/teamH"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="46dp"
+        android:text="team1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <EditText
+        android:id="@+id/teamG"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:text="team2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <EditText
+        android:id="@+id/scoreH"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:text="score host"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/minH"
+        app:layout_constraintTop_toBottomOf="@+id/teamH" />
+
+    <EditText
+        android:id="@+id/scoreG"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:text="score guest"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/incG"
+        app:layout_constraintTop_toBottomOf="@+id/teamG" />
+
+    <EditText
+        android:id="@+id/foulsH"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreH" />
+
+    <EditText
+        android:id="@+id/foulsG"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreG" />
+
+    <Button
+        android:id="@+id/minH"
+        android:layout_width="42dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/mybtn"
+        android:text="-"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/scoreH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/incH"
+        android:layout_width="42dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/mybtn"
+        android:text="+"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/minG"
+        app:layout_constraintStart_toEndOf="@+id/scoreH"
+        app:layout_constraintTop_toBottomOf="@+id/teamH" />
+
+    <Button
+        android:id="@+id/minG"
+        android:layout_width="42dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/mybtn"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/scoreG"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/incG"
+        android:layout_width="38dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/mybtn"
+        android:text="+"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/foulsG"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
