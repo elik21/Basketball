@@ -7,7 +7,7 @@ Option to start,stop, resume,restart clock.
 3. Adding games,players to editable list
 4. Creating a tournaments and single games with final,semi final and quarter final.
 5. Matching Players to team list. <br />
-![basketball][https://media.giphy.com/media/xNvfVSA3Fga83LFCYt/giphy.gif]
+![basketball](https://media.giphy.com/media/xNvfVSA3Fga83LFCYt/giphy.gif)
 
 
 
