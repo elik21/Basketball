@@ -1,5 +1,5 @@
 # Basketball
-This app is created for people who want to make tournaments or single basketball games.
+This app is created for people who want to make tournaments or single basketball games.<br />
 the app includes:
 1. Basketball  game countdown timer clock for 4 quarters.<br />
 Option to start,stop, resume,restart clock.
