@@ -6,8 +6,9 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "plays_table")
+@Entity(tableName = "plays2_table")
 public class Player implements Serializable {
+
     private String name;
     private int TShirtNumber;
     public double height;

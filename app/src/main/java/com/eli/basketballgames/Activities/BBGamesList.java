@@ -13,14 +13,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.eli.basketballgames.Adapters.GamesAdapter;
-import com.eli.basketballgames.Adapters.playersAdapter;
 import com.eli.basketballgames.Models.Game;
 import com.eli.basketballgames.Models.GamesViewModel;
-import com.eli.basketballgames.Models.Player;
-import com.eli.basketballgames.Models.PlayerViewModel;
+import com.eli.basketballgames.DataBase.PlayerDataBase;
 import com.eli.basketballgames.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -28,6 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BBGamesList extends AppCompatActivity {
+
+
     private GamesViewModel gameViewModel;
     public static final int ADD_PlAYER=1;
     public static final int Edit_PlAYER=2;
@@ -38,6 +39,7 @@ public class BBGamesList extends AppCompatActivity {
     private Game newPlayers;
     RecyclerView rv;
     Button click;
+    SearchView searchGames;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,32 @@ public class BBGamesList extends AppCompatActivity {
         gameViewModel= new ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory.
                 getInstance(getApplication())).get(GamesViewModel.class);
         gameViewModel.getAllPlayers().observe(this,new Observer<List<Game>>() {
+            @Override
+            public void onChanged(List<Game> games) {
+                if(games == null)
+                    return;
+                pAdapter.setPlayers(games);
+                searchGames.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+
+                        getQuery(query);
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        getQuery(newText);
+                        return false;
+                    }
+                });
+                pAdapter.notifyDataSetChanged();
+            }
+        });
+
+    }
+    public void getQuery(String name) {
+        PlayerDataBase.getInstance(getApplication()).gameDao().search(name).observe(this, new Observer<List<Game>>() {
             @Override
             public void onChanged(List<Game> games) {
                 pAdapter.setPlayers(games);
@@ -79,6 +107,7 @@ public class BBGamesList extends AppCompatActivity {
 
     public void initRecyclerView(){
         flButton=findViewById(R.id.floating);
+        searchGames=findViewById(R.id.searchGames);
 
         rv = (RecyclerView) findViewById(R.id.bb_games);
         rv.setLayoutManager(new LinearLayoutManager(this));

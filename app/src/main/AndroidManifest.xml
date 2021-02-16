@@ -14,11 +14,7 @@
         tools:targetApi="m">
         <activity android:name=".Activities.BBGamesList"
             android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -29,7 +25,14 @@
             android:launchMode="singleTop">
 
         </activity>
-        <activity android:name=".Activities.Statistics" />
+        <activity android:name=".Activities.Statistics" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".Activities.MainActivity"
             android:screenOrientation="fullSensor" />

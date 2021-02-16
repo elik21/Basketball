@@ -3,12 +3,14 @@ package com.eli.basketballgames.Models;
 import android.os.CountDownTimer;
 
 import androidx.room.Entity;
+import androidx.room.Fts4;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "game_table")
+@Entity(tableName = "game2_table")
+
 public class Game implements Serializable {
     private String hostTeam;
     private String guestTeam;
@@ -25,6 +27,9 @@ public class Game implements Serializable {
     public Game(String hostTeam, String guestTeam) {
         this.hostTeam = hostTeam;
         this.guestTeam = guestTeam;
+    }
+
+    public Game() {
     }
 
     public int getId() {

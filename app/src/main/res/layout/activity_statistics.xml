@@ -8,40 +8,43 @@
 
     <EditText
         android:id="@+id/threethrowsP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="201dp"
         android:layout_marginRight="201dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="3 throws Pts"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/twothrowP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="201dp"
         android:layout_marginRight="201dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="2 Throws Pts"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/threethrowsP" />
 
     <EditText
         android:id="@+id/PenatlyP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Penatly points"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,27 +52,221 @@
 
     <EditText
         android:id="@+id/looseballs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="201dp"
         android:layout_marginRight="201dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Looseballs"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PenatlyP" />
 
     <EditText
         android:id="@+id/fouls"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="201dp"
         android:layout_marginRight="201dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Fouls"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/looseballs" />
+
+    <EditText
+        android:id="@+id/threethrowsP1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="3 throws Pts"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/twothrowP1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="2 Throws Pts"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/threethrowsP1" />
+
+    <EditText
+        android:id="@+id/PenatlyP1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Penatly points"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twothrowP1" />
+
+    <EditText
+        android:id="@+id/looseballs1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Looseballs"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PenatlyP1" />
+
+    <EditText
+        android:id="@+id/fouls1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Fouls"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/looseballs1" />
+
+    <EditText
+        android:id="@+id/assists1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Assists"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fouls1" />
+
+    <EditText
+        android:id="@+id/avgPoints1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="average Points"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assists1" />
+
+    <EditText
+        android:id="@+id/steals1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Steals"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avgPoints1" />
+
+    <EditText
+        android:id="@+id/assists"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Assists"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fouls" />
+
+    <EditText
+        android:id="@+id/avgPoints"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="average Points"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assists" />
+
+    <EditText
+        android:id="@+id/steals"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Steals"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avgPoints" />
+
+    <EditText
+        android:id="@+id/missesTwo"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Misses from 2"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/steals" />
+
+    <EditText
+        android:id="@+id/missesTwo1"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="misses from 2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/steals1" />
+
+    <EditText
+        android:id="@+id/rebounds"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Rebounds"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missesTwo" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="111dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Rebounds"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missesTwo1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="168dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Team 1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="168dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="Team 2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

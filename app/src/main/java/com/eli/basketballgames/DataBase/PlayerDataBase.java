@@ -1,41 +1,40 @@
-package com.eli.basketballgames.Models;
+package com.eli.basketballgames.DataBase;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
-import androidx.room.DatabaseConfiguration;
-import androidx.room.InvalidationTracker;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-import com.eli.basketballgames.Interface.GamesDao;
-import com.eli.basketballgames.Interface.PlayerDao;
+import com.eli.basketballgames.Interfaces.GamesDao;
+import com.eli.basketballgames.Interfaces.PlayerDao;
+import com.eli.basketballgames.Models.Game;
+import com.eli.basketballgames.Models.Player;
 
-@Database(entities = {Player.class,Game.class},version=3,exportSchema = false)
+@Database(entities = {Player.class, Game.class},version=4,exportSchema = false)
 public  abstract class PlayerDataBase extends RoomDatabase {
-    public static PlayerDataBase instance1;
+    public static PlayerDataBase instance2;
     public abstract PlayerDao playerDao();
     public abstract GamesDao gameDao();
     public static synchronized PlayerDataBase getInstance(Context context){
-        if(instance1==null){
-            instance1= Room.databaseBuilder(context.getApplicationContext(),PlayerDataBase.class,"game_DB")
+        if(instance2==null){
+            instance2= Room.databaseBuilder(context
+                    .getApplicationContext()
+                    ,PlayerDataBase.class,"game4_DB")
                     .fallbackToDestructiveMigration().
                   addCallback(roomCallback1).build();
         }
-        return instance1;
+        return instance2;
     }
     private static RoomDatabase.Callback roomCallback1=new RoomDatabase.Callback(){
 
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db1) {
             super.onCreate(db1);
-            new PopulateDBAsyncTask(instance1).execute();
+            new PopulateDBAsyncTask(instance2).execute();
         }
     };
 

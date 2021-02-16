@@ -1,4 +1,4 @@
-package com.eli.basketballgames.Interface;
+package com.eli.basketballgames.Interfaces;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -19,9 +19,9 @@ public interface PlayerDao {
     void Update(Player player);
     @Delete
     void Delete(Player player);
-    @Query("Delete from plays_table")
+    @Query("Delete from plays2_table")
     void deleteAllDocuments();
-    @Query("Select* from plays_table")
+    @Query("Select* from plays2_table")
     LiveData<List<Player>> getAllPlayers();
 
 }

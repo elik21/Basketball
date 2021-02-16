@@ -34,13 +34,12 @@ playersAdapter pAdapter;
 Intent intent;
 FloatingActionButton flButton;
 private Player newPlayers;
- RecyclerView rv;
- Button click;
+RecyclerView rv;
+Button click;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palyers_list);
-
         initRecyclerView();
         setpAdapter();
         getData();

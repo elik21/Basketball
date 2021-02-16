@@ -1,4 +1,4 @@
-package com.eli.basketballgames.Interface;
+package com.eli.basketballgames.Interfaces;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -19,8 +19,11 @@ public interface GamesDao {
     void Update(Game game);
     @Delete
     void Delete(Game game);
-    @Query("Delete from game_table")
+    @Query("Delete from game2_table")
     void deleteAllDocuments();
-    @Query("Select* from game_table")
+    @Query("Select* from game2_table")
     LiveData<List<Game>> getAllPlayers();
+    @Query("Select *from game2_table where game2_table.guestTeam Like '%' || :query || '%'")
+    LiveData<List<Game>> search(String query);
+
 }

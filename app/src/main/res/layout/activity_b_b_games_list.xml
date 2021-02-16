@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+android:background="@drawable/download"
     tools:context=".Activities.BBGamesList">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -12,13 +13,14 @@
         android:layout_height="414dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="9dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
+        android:background="#989D4141"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/searchGames" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating"
@@ -29,4 +31,13 @@
         app:layout_constraintTop_toBottomOf="@+id/bb_games"
         app:srcCompat="@drawable/ic_baseline_add"
         tools:layout_editor_absoluteX="292dp" />
+
+    <SearchView
+        android:id="@+id/searchGames"
+        android:layout_width="295dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="16dp"
+        android:background="#BF2A2A"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="50dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

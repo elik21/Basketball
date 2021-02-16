@@ -1,12 +1,13 @@
-package com.eli.basketballgames.Models;
+package com.eli.basketballgames.repositories;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
-import androidx.room.Database;
 
-import com.eli.basketballgames.Interface.PlayerDao;
+import com.eli.basketballgames.Interfaces.PlayerDao;
+import com.eli.basketballgames.Models.Player;
+import com.eli.basketballgames.DataBase.PlayerDataBase;
 
 import java.util.List;
 
